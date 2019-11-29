@@ -5,5 +5,6 @@ Current list of coding basic exercises required for each language:
 - Stacks/Queues
 - Min/Max Heaps with proper traversal
 - Postfix calculation using stacks and heaps
+- Hash table
 - Sorting algorithms
 - File IO
