@@ -1,10 +1,19 @@
-Current list of coding basic exercises required for each language:
+# Code Basics
+Code basics is a small library of problems/examples of data structures I use to demonstrate capability in each language.
 
-- Recursion (functional programs)
-- Linked Lists
-- Stacks/Queues
-- Min/Max Heaps with proper traversal
-- Postfix calculation using stacks and heaps
-- Hash table
-- Sorting algorithms
-- File IO
+## Current List of Problems
+* Recursion
+* Linked lists
+* Stacks/queues
+* Heaps with traversal
+* Hash tables
+* Higher order functions
+
+## Current List of Languages
+* Python
+
+## Contribution
+Feel free to request any changes. For major changes such as additions, please add an issue to discuss the change first.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
