@@ -39,19 +39,12 @@ class LinkedList(ABC): # Doubly linked lists inherit LinkedLists
     # Status methods
     @property
     def tail(self): # Tail of the list is a property method that has to be re-calculated
-        current = self.head
-        while current:
-            current = current.next
-        return current
+        return list(self)[-1]
+    @property
     def isEmpty(self):
         return self.head == None
     def __len__(self):
-        current = self.head
-        count = 0
-        while current:
-            count += 1
-            current = current.next
-        return count
+        return len(list(self))
     def __copy__(self): # Creates a deep copy of the entire list
         pass
     def __reverse__(self): # Creates a deep copy of the entire list, reversed
@@ -59,7 +52,7 @@ class LinkedList(ABC): # Doubly linked lists inherit LinkedLists
     # These are value INSERTION methods
     # Inserting values to the head, with the option to insert before a specific value
     def insert(self, value, beforeVal=self.head.value):
-        if self.isEmpty() and beforeVal == None: # Short-circuit for an empty list
+        if self.isEmpty and beforeVal == None: # Short-circuit for an empty list
             self.head = Node(value)
             return
         if beforeVal == None: # Short-circuit for "inserting" to the end (appending)
@@ -77,7 +70,7 @@ class LinkedList(ABC): # Doubly linked lists inherit LinkedLists
         return "Chosen insertion value does not exist in this list."
     # Append values to the end, with the option to append after a specific value
     def append(self, value, afterVal=self.tail.value):
-        if self.isEmpty() and afterVal == None: # Short-circuit for an empty list
+        if self.isEmpty and afterVal == None: # Short-circuit for an empty list
             self.head = Node(value)
             return
         if afterVal == None: # Short-circuit for "appending" to the beginnning (inserting)
@@ -92,6 +85,12 @@ class LinkedList(ABC): # Doubly linked lists inherit LinkedLists
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # These are value DELETION methods
     # Pop and remove values
+        # tail = self.getTail()
+        # if self.next == tail:
+            # self.next = None
+            # return tail.value
+        # else:
+            # return self.next.trimTail()
     # Remove a specific value
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # These are ITERATION methods to step through the lists
